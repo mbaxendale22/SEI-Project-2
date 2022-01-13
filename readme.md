@@ -7,7 +7,7 @@ The project is deployed via Netlify [here](https://frosty-shaw-45771e.netlify.ap
 
 The application must:
 
-* Consume a public API 
+* Consume a public API
 * Have several components
 * The app can have a router
 * Include wireframes
@@ -24,7 +24,6 @@ The user stories around which they project was planned and built are as follows:
 * Users can request a random podcast
 * Users can see detailed information about each podcast in the collection   
 * Users are offered a selection of podcasts that they might enjoy based on the podcast they are currently viewing
-sa
 
 ## Tech Stack
 
@@ -41,6 +40,19 @@ sa
 
 After cementing our agreed upon user stories for the project, we discussed the look and feel of the app. I tested the endpoints offered by the Listen Notes API and explored the structure of the data, while Sapphire produced wireframes for the key pages of the app. 
 
+![5_Insomnia-Project-2_screenshot](https://user-images.githubusercontent.com/84339614/148827153-973c552b-713d-4534-8c76-a710a6c72cd6.png)
+
+
+<p align="center">
+<img height="270" src="https://user-images.githubusercontent.com/84339614/148827900-c807b715-afd4-43c6-a37b-acf584b2a02b.png" alt="wireframe homepage">
+<img height="270" src="https://user-images.githubusercontent.com/84339614/148828032-2c0d598a-70ac-41cb-9e07-ce76321d1eaf.png" alt="wireframe recommendations page">
+</p>
+
+<p align="center">
+<img height="270" src="https://user-images.githubusercontent.com/84339614/148828150-5f696338-4e48-468c-bd9f-a7e3bbee77db.png" alt="wireframe podcast show">
+</p>
+
+
 
 ## App Snapshot
 
@@ -54,7 +66,7 @@ Users can then choose a podcast aboout which to receive more detailed informatio
 ![show podcast page](/readme_assets/podcast-show.png)
 
 And receive further recommendations based on the current podcast selected, these thumbnails can also be clicked to navigate to page displaying detailed information, creating a loop of recommendations
-![show more podcasts]('/readme_assets/show-more.png)
+![show more podcasts](/readme_assets/show-more.png)
 
 
 ## Featured Code Snippet
@@ -110,13 +122,13 @@ const [recommend, setRecommend] = useState([])
 
 ```
 
-The structure of this code was a pattern repeated throughout our components for this app. 
-* Hit a specific Listen notes endpoint using an Axios GET request, inside a useEffect
+The structure of this code was a pattern repeated throughout our components for this app: 
+* Hit a specific Listen Notes endpoint using an Axios GET request, inside a useEffect
 * store the returned data in a piece of state 
 * map through the data to dynamically display what had been returned.  
 
 The listen notes endpoint required the ID of a podcast that you wanted recommendations based on. This component was rendered on the main 
-'podcast show' page so the ID of that podcast was already available to pass in as props. We went for a conditional render based on the user clicking a button to confirm they wanted to see recommendations: 
+'podcast show' page so the ID of that podcast was already available to pass in as props. We went for a conditional render based on the user clicking a button to confirm they want to see further recommendations: 
 
 ```javascript
 
@@ -138,8 +150,8 @@ The global search available in the nav bar works in the sense it returns podcast
 
 ## Future Development
 
-* as mentioned, fix the global search to give more accurate results
-* allow the user to save their favourite podcasts to an account
+* As mentioned, fix the global search to give more accurate results
+* Allow the user to save their favourite podcasts to an account
 
 
 
