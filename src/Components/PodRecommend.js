@@ -7,8 +7,6 @@ const PodRecommend = ({ id }) => {
 
   const [recommend, setRecommend] = useState([]) 
 
-  // const { id } = useParams()
-
   useEffect(() => {
     const getData = async () => {
       try {
